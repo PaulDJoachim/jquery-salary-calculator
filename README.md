@@ -1,12 +1,17 @@
-# Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+task list:
 
-## Description
+[x] create input form for first name, last name, ID number, job title, annual salary
 
-Your project description goes here. What problem did you solve? How did you solve it?
+[ ] add input button that stores the info as array objects, 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+[ ] add function for calculating monthly costs,
+
+[ ] prints the info to the DOM (red background if cost > $20,000)
+
+[ ] add delete button to remove employees from DOM
+
+
 
 
 <!-- Begin added description -->
