@@ -3,9 +3,9 @@ task list:
 
 [x] create input form for first name, last name, ID number, job title, annual salary
 
-[ ] add input button that stores the info as array objects, 
+[x] add input button that stores the info as array objects, 
 
-[ ] add function for calculating monthly costs,
+[x] add function for calculating monthly costs,
 
 [ ] prints the info to the DOM (red background if cost > $20,000)
 

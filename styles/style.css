@@ -1,34 +1,33 @@
 
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 header {
     text-align: center;
 }
 
 form {
     background-color: #9b7865;
-    text-align: center;
     overflow: auto;
     width: 80%;
     margin: auto;
-}
-
-label {
-    width: 120px;
-    text-align: right;
+    padding: 20px;
 }
 
 input {
-    width: 150px;
+    width: 16%;
+    margin: auto;
+}
+
+.employeeButton {
     float: right;
-}
-
-.employeeIn {
-    min-width: 20%;
-    margin: 10px 30% 10px 30%;
+    margin: 10px;
     padding: 5px;
+    border-radius: 5px;
+
 }
 
-.formItem {
-    width: 280px;
-    float: left;
-    margin: 5px;
+.inputBoxes {
+    display: flex;
 }
