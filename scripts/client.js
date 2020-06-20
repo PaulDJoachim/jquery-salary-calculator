@@ -20,6 +20,8 @@ function addEmployee() {
     employees.push(employeeObj);
     // log a note in the console to show that the submission is in the array
     console.log(`added ${employees[employees.length-1].firstName} ${employees[employees.length-1].lastName}`);
+    // display the employees on the DOM
+    printEmployees(employees);
     // calculate the monthly cost
     monthlyCost(employees);
     
@@ -38,3 +40,30 @@ function monthlyCost(array) {
     cost = total / 12;
     return cost;
 } // end monthlyCost
+
+// display the employees on the DOM
+function printEmployees(array) {
+    // clear any previous table
+    $('.employeeTable').empty();
+    // create a new table header
+    $('.employeeTable').append(
+        `<tr class="tableHeader">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID #</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>`
+    );
+    // add rows with data for each employee
+    for (let employee of array) {
+        $('.employeeTable').append(
+            `<tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.idNumber}</td>
+                <td>${employee.jobTitle}</td>
+                <td>${employee.salary}</td>
+            </tr>`
+        );
+    }
+}

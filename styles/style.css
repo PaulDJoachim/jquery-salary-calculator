@@ -7,11 +7,14 @@ header {
     text-align: center;
 }
 
+section {
+    width: 80%;
+    margin: auto;
+}
+
 form {
     background-color: #9b7865;
     overflow: auto;
-    width: 80%;
-    margin: auto;
     padding: 20px;
 }
 
@@ -30,4 +33,12 @@ input {
 
 .inputBoxes {
     display: flex;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
 }
