@@ -42,3 +42,11 @@ table {
 table, th, td {
     border: 1px solid black;
 }
+
+.costSection {
+    text-align: right;
+}
+
+.costDisplay, .costLabel {
+    display: inline-block;
+}

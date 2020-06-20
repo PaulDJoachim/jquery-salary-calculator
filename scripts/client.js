@@ -22,8 +22,7 @@ function addEmployee() {
     console.log(`added ${employees[employees.length-1].firstName} ${employees[employees.length-1].lastName}`);
     // display the employees on the DOM
     printEmployees(employees);
-    // calculate the monthly cost
-    monthlyCost(employees);
+
     
 } // end addEmployee
 
@@ -43,9 +42,11 @@ function monthlyCost(array) {
 
 // display the employees on the DOM
 function printEmployees(array) {
-    // clear any previous table
+    let cost = monthlyCost(employees);
+    // clear any previous table / cost calculation
     $('.employeeTable').empty();
-    // create a new table header
+    $('.costSection').empty();
+    // re-create table header
     $('.employeeTable').append(
         `<tr class="tableHeader">
             <th>First Name</th>
@@ -62,8 +63,18 @@ function printEmployees(array) {
                 <td>${employee.lastName}</td>
                 <td>${employee.idNumber}</td>
                 <td>${employee.jobTitle}</td>
-                <td>${employee.salary}</td>
+                <td>$${employee.salary.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
             </tr>`
         );
     }
-}
+    // add monthly cost to dom
+    $('.costSection').append(
+        '<p class="costLabel">Total Monthly:</p>',
+        '<p class="costDisplay">', ' $', cost.toLocaleString(undefined, { maximumFractionDigits: 2 }),'</p>'        
+        );
+    if (cost > 20000) {
+        $('.costSection').css('background-color','red');
+    }
+} // end printEmployees
+
+

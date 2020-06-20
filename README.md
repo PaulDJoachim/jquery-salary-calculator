@@ -7,7 +7,7 @@ task list:
 
 [x] add function for calculating monthly costs,
 
-[/] prints the info to the DOM (red background if cost > $20,000)
+[x] prints the info to the DOM (red background if cost > $20,000)
 
 [ ] add delete button to remove employees from DOM
 
