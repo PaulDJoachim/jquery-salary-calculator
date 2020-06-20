@@ -1,9 +1,14 @@
 
+header {
+    text-align: center;
+}
 
 form {
     background-color: #9b7865;
     text-align: center;
     overflow: auto;
+    width: 80%;
+    margin: auto;
 }
 
 label {
