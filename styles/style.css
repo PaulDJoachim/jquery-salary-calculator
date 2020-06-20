@@ -2,15 +2,8 @@
 
 form {
     background-color: #9b7865;
-    padding-bottom: 40px;
-    padding-top: 10px;
-    margin: 10px;
-    min-width: 360px;
-}
-
-input, label {
-    float: left;
-    margin: 5px;
+    text-align: center;
+    overflow: auto;
 }
 
 label {
@@ -19,6 +12,18 @@ label {
 }
 
 input {
-    margin-right: 5%;
     width: 150px;
+    float: right;
+}
+
+.employeeIn {
+    min-width: 20%;
+    margin: 10px 30% 10px 30%;
+    padding: 5px;
+}
+
+.formItem {
+    width: 280px;
+    float: left;
+    margin: 5px;
 }
