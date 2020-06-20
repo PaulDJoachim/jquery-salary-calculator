@@ -7,6 +7,8 @@ function readyNow() {
     $('#employeeIn').on('click', addEmployee);
 }
 
+
+
 function addEmployee() {
     // create an object for each new employee
     const employeeObj = {
@@ -22,9 +24,8 @@ function addEmployee() {
     console.log(`added ${employees[employees.length-1].firstName} ${employees[employees.length-1].lastName}`);
     // display the employees on the DOM
     printEmployees(employees);
-
-    
 } // end addEmployee
+
 
 
 // calculate monthly cost
@@ -39,6 +40,8 @@ function monthlyCost(array) {
     cost = total / 12;
     return cost;
 } // end monthlyCost
+
+
 
 // display the employees on the DOM
 function printEmployees(array) {
@@ -58,23 +61,44 @@ function printEmployees(array) {
     // add rows with data for each employee
     for (let employee of array) {
         $('.employeeTable').append(
-            `<tr>
+            `<tr class="${employee.idNumber}">
                 <td>${employee.firstName}</td>
                 <td>${employee.lastName}</td>
                 <td>${employee.idNumber}</td>
                 <td>${employee.jobTitle}</td>
                 <td>$${employee.salary.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
+                <td>
+                    <button type="button" id="deleteId${employee.idNumber}">Delete</button>
+                </td>
             </tr>`
         );
+        // add event handler for delete clicks
+        $(`#deleteId${employee.idNumber}`).on('click', deleteEmployee);
     }
+    
     // add monthly cost to dom
     $('.costSection').append(
         '<p class="costLabel">Total Monthly:</p>',
         '<p class="costDisplay">', ' $', cost.toLocaleString(undefined, { maximumFractionDigits: 2 }),'</p>'        
         );
+    // turn red if cost is > 20000
     if (cost > 20000) {
         $('.costSection').css('background-color','red');
     }
 } // end printEmployees
+
+
+
+function deleteEmployee() {
+    console.log('in deleteEmployee')
+    for (i=0; employees.length > i; i++) {
+        console.log('checking array item for delete button match');
+        if ('deleteId' + employees[i].idNumber === $(this).attr('id')) {
+            employees.splice(i,1);
+            console.log('found match');
+        }
+    }
+    printEmployees(employees);
+}
 
 
