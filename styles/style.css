@@ -4,14 +4,14 @@ html {
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: linear-gradient(rgb(149, 168, 189),rgb(95, 120, 148) );
+    background-image: linear-gradient(rgb(187, 211, 238),rgb(95, 120, 148) );
     margin:0px;
 }
 
 header {
     text-align: center;
     width: 100%;
-    background-color: rgb(145, 184, 243);
+    background-image: radial-gradient( rgb(192, 215, 241),rgb(86, 123, 167) );
     border-bottom: solid black 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -31,11 +31,12 @@ section {
 }
 
 form {
-    background-color: hsl(214, 83%, 82%);
+    background-color: hsl(213, 26%, 85%);
     overflow: auto;
     padding: 10px;
-    border: solid black 1px;
+    border: solid black 2px;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 input {
@@ -57,26 +58,44 @@ input {
 
 table {
     width: 100%;
-    background-color: rgb(175, 200, 228);
+    background-color: hsl(213, 26%, 85%);
+    border-radius: 5px;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid black;
 
 }
 
 tr:nth-child(even) {
-    background-color: rgb(149, 168, 189);
+    background-color: rgb(163, 198, 238);
   }
 
 .costSection {
     text-align: right;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: hsl(213, 26%, 85%);
 }
 
 .costDisplay, .costLabel {
     display: inline-block;
+    margin: 8px 0 8px 0;
+}
+
+.costLabel {
+    font-weight: bold;
+}
+
+.costDisplay {
+    margin-right: 20px;
 }
 
 .error {
     float:left;
+    color: rgb(204, 30, 30);
+}
+
+p {
+    color:inherit;
 }

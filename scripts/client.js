@@ -86,14 +86,14 @@ function printEmployees(array) {
     
     // add monthly cost to dom
     $('.costSection').append(
-        '<p class="costLabel">Total Monthly:</p>',
-        '<p class="costDisplay">', ' $', cost.toLocaleString(undefined, { maximumFractionDigits: 2 }),'</p>'        
+        '<p class="costLabel">Total Monthly:</p>&nbsp',
+        `<p class="costDisplay">$${cost.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>`        
         );
     // turn red if cost is > 20000
     if (cost > 20000) {
-        $('.costSection').css('background-color','red');
+        $('.costSection').css('background-color','rgb(204, 30, 30)');
     } else {
-        $('.costSection').css('background-color','white');
+        $('.costSection').css('background-color', 'hsl(213, 26%, 85%)');
     }
 } // end printEmployees
 
