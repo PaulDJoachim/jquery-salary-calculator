@@ -1,10 +1,28 @@
+html {
+    height: 100%;
+}
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(rgb(149, 168, 189),rgb(95, 120, 148) );
+    margin:0px;
 }
 
 header {
     text-align: center;
+    width: 100%;
+    background-color: rgb(145, 184, 243);
+    border-bottom: solid black 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin:0;
+}
+
+h2 {
+    margin-top:0;
 }
 
 section {
@@ -13,9 +31,11 @@ section {
 }
 
 form {
-    background-color: #9b7865;
+    background-color: hsl(214, 83%, 82%);
     overflow: auto;
-    padding: 20px;
+    padding: 10px;
+    border: solid black 1px;
+    margin-bottom: 20px;
 }
 
 input {
@@ -37,11 +57,17 @@ input {
 
 table {
     width: 100%;
+    background-color: rgb(175, 200, 228);
 }
 
 table, th, td {
     border: 1px solid black;
+
 }
+
+tr:nth-child(even) {
+    background-color: rgb(149, 168, 189);
+  }
 
 .costSection {
     text-align: right;
@@ -49,4 +75,8 @@ table, th, td {
 
 .costDisplay, .costLabel {
     display: inline-block;
+}
+
+.error {
+    float:left;
 }

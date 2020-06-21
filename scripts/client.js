@@ -10,6 +10,14 @@ function readyNow() {
 
 
 function addEmployee() {
+    // check to make sure there is a unique ID number
+    $('.error').empty();
+    for (employee of employees){
+        if (employee.idNumber === $('#idNumber').val()) {
+            $('.error').append('<p>New employees must have a unique ID Number!');
+            return;
+        }
+    }
     // create an object for each new employee
     const employeeObj = {
         firstName: $('#firstName').val(),
@@ -84,6 +92,8 @@ function printEmployees(array) {
     // turn red if cost is > 20000
     if (cost > 20000) {
         $('.costSection').css('background-color','red');
+    } else {
+        $('.costSection').css('background-color','white');
     }
 } // end printEmployees
 
