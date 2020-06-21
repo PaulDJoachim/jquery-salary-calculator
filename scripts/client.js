@@ -1,15 +1,16 @@
 
 $(readyNow);
 
+// main employee array
 let employees = [];
 
 function readyNow() {
     $('#employeeIn').on('click', addEmployee);
     $('.employeeTable').on('click', $('.deleteBtn'), deleteEmployee)
-}
+} // end readyNow
 
 
-
+// add an employee to the table, clear the input fields
 function addEmployee() {
     // check to make sure there is a unique ID number
     $('.error').empty();
@@ -33,8 +34,13 @@ function addEmployee() {
     console.log(`added ${employees[employees.length-1].firstName} ${employees[employees.length-1].lastName}`);
     // display the employees on the DOM
     printEmployees(employees);
+    // clear the input fields
+    $('#firstName').val('')   
+    $('#lastName').val('')
+    $('#idNumber').val('')
+    $('#jobTitle').val('')
+    $('#salary').val('')
 } // end addEmployee
-
 
 
 // calculate monthly cost
@@ -51,8 +57,7 @@ function monthlyCost(array) {
 } // end monthlyCost
 
 
-
-// display the employees on the DOM
+// display the employees in the array on the DOM
 function printEmployees(array) {
     let cost = monthlyCost(employees);
     // clear any previous table / cost calculation
