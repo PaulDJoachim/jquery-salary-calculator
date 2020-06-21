@@ -76,7 +76,7 @@ function printEmployees(array) {
                 <td>${employee.jobTitle}</td>
                 <td>$${employee.salary.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
                 <td>
-                    <button type="button" id="deleteId${employee.idNumber}">Delete</button>
+                    <button type="button" class="deleteBtn" id="deleteId${employee.idNumber}">Delete</button>
                 </td>
             </tr>`
         );
