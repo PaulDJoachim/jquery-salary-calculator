@@ -5,6 +5,7 @@ let employees = [];
 
 function readyNow() {
     $('#employeeIn').on('click', addEmployee);
+    $('.employeeTable').on('click', $('.deleteBtn'), deleteEmployee)
 }
 
 
@@ -67,6 +68,7 @@ function printEmployees(array) {
             <th>Annual Salary</th>`
     );
     // add rows with data for each employee
+    // create a delete button with a unique ID matching the associated employee
     for (let employee of array) {
         $('.employeeTable').append(
             `<tr class="${employee.idNumber}">
@@ -80,8 +82,8 @@ function printEmployees(array) {
                 </td>
             </tr>`
         );
-        // add event handler for delete clicks
-        $(`#deleteId${employee.idNumber}`).on('click', deleteEmployee);
+        // add event handler for delete clicks (moved this to onReady)
+        // $(`#deleteId${employee.idNumber}`).on('click', deleteEmployee);
     }
     
     // add monthly cost to dom
@@ -98,17 +100,19 @@ function printEmployees(array) {
 } // end printEmployees
 
 
-
-function deleteEmployee() {
+// match the delete button ID to an employee in the array and delete them
+function deleteEmployee(event) {
     console.log('in deleteEmployee')
+    // search through the employee array
     for (i=0; employees.length > i; i++) {
         console.log('checking array item for delete button match');
-        if ('deleteId' + employees[i].idNumber === $(this).attr('id')) {
+        // check for matches between the delete button ID and the employee ID in the employees array
+        if (event.originalEvent.target.id === 'deleteId' + employees[i].idNumber) {
+            // if found, delete the employee from the array
             employees.splice(i,1);
             console.log('found match');
         }
     }
+    // re-print the table (without the deleted employee)
     printEmployees(employees);
-}
-
-
+}// end deleteEmployee

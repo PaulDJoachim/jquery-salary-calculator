@@ -1,45 +1,16 @@
 
-task list:
 
-[x] create input form for first name, last name, ID number, job title, annual salary
-
-[x] add input button that stores the info as array objects, 
-
-[x] add function for calculating monthly costs,
-
-[x] prints the info to the DOM (red background if cost > $20,000)
-
-[x] add delete button to remove employees from DOM
-
-
-
-
-<!-- Begin added description -->
-(View Raw will give you the markdown that you can copy to your repos!)
-
-
-![MIT LICENSE](https://img.shields.io/github/license/scottbromander/the_marketplace.svg?style=flat-square)
-![REPO SIZE](https://img.shields.io/github/repo-size/scottbromander/the_marketplace.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/scottbromander/the_marketplace.svg?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
-
-# PROJECT NAME
+# SALARY CALCULATOR
 
 ## Description
 
-_Duration: 2 Week Sprint_
+_Duration: 2 Days_
 
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it? 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam at massa in faucibus. Etiam volutpat, risus non mollis convallis, velit nisi pulvinar mi, eu faucibus orci nisi eget nibh. Integer a velit pretium, volutpat arcu eleifend, fringilla elit. Cras erat sapien, convallis venenatis tellus vitae, feugiat dictum felis.
-
-Suspendisse euismod volutpat aliquet. Maecenas vulputate mauris in pellentesque facilisis. Phasellus varius malesuada semper. Cras sollicitudin diam mollis maximus aliquam.
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
+This application allows employees to be added to a table. When salaries are provided for each employee the application will calculate and dislplay the monthly cost of payroll. If the monthly cost is greater than $20,000 the display will turn red to indicate that the expense is too high.
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![Wireframe](salary-calc.png)
 
 ### Prerequisites
 
